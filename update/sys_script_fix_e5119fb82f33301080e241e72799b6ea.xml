@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description>Recupero del numero dell'incident data la short description</description>
+        <name>Corso SMAC</name>
+        <record_for_rollback>false</record_for_rollback>
+        <script><![CDATA[var now_GR =new GlideRecord('incident');
+
+now_GR.addQuery("short_description" ,"=", "Performance problems with email");
+
+//Eseguo la query
+now_GR.query();
+
+now_GR.next();
+
+gs.info(now_GR.getValue('number'));]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-11 08:49:58</sys_created_on>
+        <sys_id>e5119fb82f33301080e241e72799b6ea</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Corso SMAC</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_fix_e5119fb82f33301080e241e72799b6ea</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-11 09:10:36</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>
